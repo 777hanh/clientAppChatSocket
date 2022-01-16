@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +35,50 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+.landing {
+	position: relative;
+	background: url('./assets/landing.jpg') no-repeat center center/cover;  
+	height: 100vh;
+}
+
+.dark-overlay {
+	background-color: rgba(0, 0, 0, 0.5);
+	height: 100%;
+}
+
+.landing-inner {
+	height: 100%;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+.landing-inner h1,
+.landing-inner h4,
+.landing-inner p {
+	color: white;
+}
+
+.link-form-landing{
+	color: #2a9fd6;
+	text-decoration: none
+}
+.nameWeb:hover{
+  cursor:pointer;
+  color: #2a9fd6
+}
+span.nameWebClick{
+  color:aqua
+}
+
+.rm_icon{
+  font-size:20px
+}
+.rm_icon:hover{
+  cursor:pointer;
+  color: #f7232d
 }

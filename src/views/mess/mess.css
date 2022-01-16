@@ -1,0 +1,143 @@
+.messenger{
+    height: calc(100vh - 70px);
+    display: flex;
+}
+
+.chatMenu{
+    flex: 3.3
+}
+
+.chatBox{
+    flex:7.5
+}
+
+.null-current-chat{
+    padding: 44px 0;
+    text-align: center;
+    font-size:44px;
+    color: rgb(224,220,220);
+    cursor: default;
+}
+
+.chatBoxWrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content:between;
+}
+
+.chatBoxBottom{
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.chatMessageInput{
+    width:90%;
+    height:48px;
+    resize: none;
+    padding: 10px;
+}
+
+.chatBoxTop{
+    height:100%;
+    overflow-y: scroll;
+    padding-right: 12px;
+    padding-top:20px;
+}
+
+.chatSubmitButton{
+    width: 40px;
+    height: 40px;
+    border-radius:50%;
+    border:none;
+    cursor: pointer;
+    background-color:#8a39ef;
+    color: white;
+}
+
+.chatFriend{
+    flex:3
+}
+
+.chatFriendHeader{
+    text-align: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.chatMenuWrapper,.chatBoxWrapper{
+    padding:10px;
+    /* background-color:aqua; */
+    height:100%;
+}
+.chatFriendWrapper{
+    height:80%;
+}
+
+
+
+.chatMenuSearch{
+    width:90%;
+    padding:4px 0;
+    border:none;
+    border-bottom:1px solid;
+    margin-bottom:12px;
+    display: flex;
+}
+
+.chatMenuSearch:focus{
+    outline: none;
+}
+
+.searchFriendWrapper{
+    display: flex;
+}
+.chatMenuSearchBtn{
+    border-radius: 50%;
+    border: none;
+    margin-right: 20px;
+}
+.itemMenuSearchBtn{
+    font-size:16px;
+}
+
+/* CSS */
+.chatMenuSearchBtn {
+  align-items: center;
+  appearance: none;
+  background-color: #1c4a68;
+  background-image: linear-gradient(1deg, #01090e , #1497e4 88%);
+  background-size: calc(90% + 20px) calc(90% + 20px);
+  border-radius: 100px;
+  border-width: 0;
+  box-shadow: none;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: CircularStd,sans-serif;
+  font-size: 1rem;
+  height: auto;
+  justify-content: center;
+  line-height: 1.5;
+  padding: 6px 20px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color .2s,background-position .2s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: top;
+  white-space: nowrap;
+}
+
+.chatMenuSearchBtn:active,
+.chatMenuSearchBtn:focus {
+  outline: none;
+}
+
+.chatMenuSearchBtn:focus:not(:active) {
+  box-shadow: rgba(40, 170, 255, 0.25) 0 0 0 .125em;
+}
