@@ -3,12 +3,12 @@
     display: flex;
 }
 
-.chatMenu{
+/* .chatMenu{
     flex: 3.3
-}
+} */
 
 .chatBox{
-    flex:7.5
+    flex:10.5
 }
 
 .null-current-chat{
@@ -57,7 +57,7 @@
 }
 
 .chatFriend{
-    flex:3
+    flex:2
 }
 
 .chatFriendHeader{
@@ -78,7 +78,7 @@
 
 
 .chatMenuSearch{
-    width:90%;
+    width:100%;
     padding:4px 0;
     border:none;
     border-bottom:1px solid;
@@ -103,41 +103,128 @@
 }
 
 /* CSS */
+.chatMenuSearchBtn{
+    border-radius: 16;
+    border: none;
+    margin-right: 20px;
+}
+
 .chatMenuSearchBtn {
-  align-items: center;
-  appearance: none;
-  background-color: #1c4a68;
-  background-image: linear-gradient(1deg, #01090e , #1497e4 88%);
-  background-size: calc(90% + 20px) calc(90% + 20px);
-  border-radius: 100px;
-  border-width: 0;
-  box-shadow: none;
-  box-sizing: border-box;
-  color: #FFFFFF;
-  cursor: pointer;
-  display: inline-flex;
-  font-family: CircularStd,sans-serif;
-  font-size: 1rem;
-  height: auto;
-  justify-content: center;
-  line-height: 1.5;
-  padding: 6px 20px;
-  position: relative;
-  text-align: center;
-  text-decoration: none;
-  transition: background-color .2s,background-position .2s;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  vertical-align: top;
-  white-space: nowrap;
+    align-items: center;
+    appearance: none;
+    background-color: #fff;
+    background-size: calc(90% + 12px) calc(90% + 12px);
+    border-radius: 100px;
+    border-width: 0;
+    box-shadow: none;
+    box-sizing: border-box;
+    color: #03a9f4;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: CircularStd,sans-serif;
+    font-size: 16px;
+    height: auto;
+    justify-content: center;
+    line-height: 1.5;
+    padding: 6px 20px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color .2s,background-position .2s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: top;
+    white-space: nowrap;
+  }
+  
+  .chatMenuSearchBtn:active,
+  .chatMenuSearchBtn:focus {
+    outline: none;
+  }
+  /* fjwujfhjiafawjfaw */
+  @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family:'Poppins', sans-serif;
 }
 
-.chatMenuSearchBtn:active,
-.chatMenuSearchBtn:focus {
-  outline: none;
+
+
+.navigation{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    transition: width 0.5s, height 0.5s;
+    transition-delay: 0s, 0.75s;
+    z-index: 100000;
+    border-radius: 4px;
+    overflow: hidden;
 }
 
-.chatMenuSearchBtn:focus:not(:active) {
-  box-shadow: rgba(40, 170, 255, 0.25) 0 0 0 .125em;
+.navigation.active{
+    width: 300px;
+    height:350px;
+    transition:  height 0.5s, width 0.5s;
+    transition-delay: 0s, 0.75s;
+}
+
+.navigation .toggle{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    display:flex;
+    justify-content: flex-end;
+    align-items: center;
+    background: #ff4081;
+}
+
+.navigation .toggle.active{
+    background: #2196f3;
+
+}
+
+.navigation .toggle::before{
+    content: '+';
+    font-size:2em;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    color: #fff;
+    font-weight: 400;
+    transition: 0.5s;
+}
+
+.navigation .toggle.active::before{
+    transform: rotate(315deg)
+}
+
+.searchFriendWrapper{
+    text-align: center;
+    justify-content: center;
+    margin-left: 16px;
+}
+
+.chatMenuSearch{
+    width:90%;
+    padding:4px 0;
+    border:none;
+    border-bottom:1px solid;
+    margin-bottom:12px;
+    display: flex;
+}
+
+.chatMenuSearch:focus{
+    outline: none;
+}
+
+.searchFriendWrapper{
+    display: flex;
 }

@@ -130,6 +130,14 @@ export default function Mess() {
         })
     }, [socket])
 
+    const handleToggle = () => {
+        const navigation = document.querySelector('.navigation');
+        document.querySelector('.toggle').onclick = function () {
+            this.classList.toggle('active');
+            navigation.classList.toggle('active');
+        }
+    }
+
 
 
 
@@ -164,38 +172,46 @@ export default function Mess() {
                     {/* Hiển thị roomchat */}
                     <div className="chatMenu">
                         <div className="chatMenuWrapper">
-                            <div className="searchFriendWrapper">
-                                <button className="chatMenuSearchBtn" onClick={handleAddConverSation}><i class="fas fa-xs fa-plus itemMenuSearchBtn"></i></button>
-                                <input
-                                    className="chatMenuSearch"
-                                    placeholder="Search Friend"
-                                    onChange={(e) => setAddConversation(e.target.value)}
-                                    value={addConversation}
-                                    onKeyPress={(e) => {
-                                        e.key === "Enter" &&
-                                            handleAddConverSation()
-                                    }}
-                                />
-                            </div>
-                            {
-                                conversations.conversations ?
-                                    conversations.conversations.length > 0 ?
-                                        conversations.conversations.map((c, index) => (
-                                            <div key={index} onClick={() => {
-                                                // console.log(c)
-                                                setCurrentChat(c)
-                                                joinConversation(c)
-                                            }
-                                            }>
-                                                <Conversation conversation={c} />
-                                            </div>
+                            <div class="navigation">
+                                <div class="toggle" onClick={handleToggle}></div>
 
-                                        ))
+                                <div class="searchFriendWrapper">
+                                    <input
+                                        className="chatMenuSearch"
+                                        placeholder="Add phone number"
+                                        onChange={(e) => setAddConversation(e.target.value)}
+                                        value={addConversation}
+                                        onKeyPress={(e) => {
+                                            e.key === "Enter" &&
+                                                handleAddConverSation()
+                                        }}
+                                    />
+                                    <button className="chatMenuSearchBtn" onClick={handleAddConverSation}>add</button>
+                                </div>
+                                {
+                                    conversations.conversations ?
+                                        conversations.conversations.length > 0 ?
+                                            conversations.conversations.map((c, index) => (
+                                                <div key={index} onClick={() => {
+                                                    // console.log(c)
+                                                    setCurrentChat(c)
+                                                    joinConversation(c)
+                                                }
+                                                }>
+                                                    <Conversation conversation={c} />
+                                                </div>
+
+                                            ))
+                                            :
+                                            <div>There is no conversations</div>
                                         :
                                         <div>There is no conversations</div>
-                                    :
-                                    <div>There is no conversations</div>
-                            }
+                                }
+
+                            </div>
+                            {/* code cũ */}
+
+                            
                         </div>
                     </div>
 
@@ -238,14 +254,15 @@ export default function Mess() {
                         </div>
                     </div>
 
-                    {/* <div className="chatFriend">
+                    <div className="chatFriend">
                         <div className="chatFriendHeader">
-                            <h4>Your Friend</h4>
+                            <h4>Chat chung</h4>
                         </div>
                         <div className="chatFriendWrapper" >
-                            <Friend />
+                            {/* <Friend /> */}
+                            Chưa làm . . .
                         </div>
-                    </div> */}
+                    </div>
                 </div>
             </>
         )
