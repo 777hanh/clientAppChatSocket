@@ -38,7 +38,6 @@ export default function Mess() {
     const user = useSelector(state => state.user.phone)
 
     const handleAddConverSation = async () => {
-        // return console.log(addConversation)
         const requestBody = { receiverId: addConversation }
         if (addConversation !== '') {
             try {

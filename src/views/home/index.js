@@ -19,6 +19,7 @@ const Login = () => {
             <div className="home">
                 <NavBarMenu />
                 <h1>Home page</h1>
+                <p>Will update in next version</p>
                 {body}
             </div>
 
