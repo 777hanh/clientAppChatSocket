@@ -14,7 +14,7 @@ import io from "socket.io-client";
 
 import { ADD_CONVERSATION } from '../../redux/action/conversationAction'
 
-const socket = io.connect("http://localhost:5000")
+const socket = io.connect("https://hidden-sierra-71377.herokuapp.com/")
 
 
 export default function Mess() {
@@ -125,7 +125,7 @@ export default function Mess() {
 
     useEffect(() => {
         socket.on("recieveMessage", (data) => {
-            console.log(data)
+            // console.log(data)
             // console.log(currentChat)
             setMessages((prev) => [...prev, data])
         })

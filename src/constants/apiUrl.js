@@ -1,1 +1,1 @@
-export const apiUrl = process.env.NODE_ENV !== 'production' ? 'http://192.168.1.7:5000/api' : '/api'
+export const apiUrl = process.env.NODE_ENV !== 'production' ? 'http://192.168.1.7:5000/api' : 'https://hidden-sierra-71377.herokuapp.com/api'
