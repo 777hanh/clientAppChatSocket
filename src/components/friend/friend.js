@@ -1,5 +1,5 @@
 import "./friend.css";
-import defaulImgConversation from "../../assets/landing.jpg"
+import defaulImgConversation from "../../assets/avatar.jpg"
 
 export default function Friend(){
     return(

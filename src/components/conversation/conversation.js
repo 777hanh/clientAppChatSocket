@@ -1,6 +1,6 @@
 import "./conversation.css"
 import { useSelector } from 'react-redux'
-import defaulImgConversation from "../../assets/landing.jpg"
+import defaulImgConversation from "../../assets/avatar.jpg"
 
 
 export default function Conversation(conversation) {
