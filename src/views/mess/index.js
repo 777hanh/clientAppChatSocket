@@ -238,14 +238,14 @@ export default function Mess() {
                         </div>
                     </div>
 
-                    <div className="chatFriend">
+                    {/* <div className="chatFriend">
                         <div className="chatFriendHeader">
                             <h4>Your Friend</h4>
                         </div>
                         <div className="chatFriendWrapper" >
                             <Friend />
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             </>
         )

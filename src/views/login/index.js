@@ -48,7 +48,7 @@ const Login = () => {
                     dispatch(LOGIN_USER({
                         phone: req.data.user.phone
                     }))
-                    navigate(-1)
+                    navigate('/mess')
                 } catch (error) {
                     console.log('Loi token')
                 }
